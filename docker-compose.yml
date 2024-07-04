@@ -1,0 +1,16 @@
+version: "3"
+services:
+ web:
+   build: php-apache
+   ports:
+    - "80:80"
+   volumes:
+    - ${PHP_APACHE_DIRECTORY}:/var/www/html
+
+ db:
+  build: mysql
+  ports:
+   - "3306:3306"
+  volumes:
+   - ${DB_DIRECTORY}:/var/lib/mysql
+  #  - /home/ubuntu/codeigniter-project/mydatabase/:/var/lib/mysql

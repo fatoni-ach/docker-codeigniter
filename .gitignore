@@ -1,0 +1,5 @@
+.env
+php-apache/Codes/*
+mysql/data/*
+
+.DS_Store
