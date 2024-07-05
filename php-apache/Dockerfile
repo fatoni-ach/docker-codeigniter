@@ -20,8 +20,9 @@ WORKDIR /var/www/html
 RUN chown -R www-data:www-data /var/www/html \
     && composer self-update
 
-COPY codeigniter.conf /etc/apache2/sites-available/
-RUN a2ensite codeigniter.conf \
+COPY sites-available/* /etc/apache2/sites-available/
+# COPY nasimerah.conf /etc/apache2/sites-available/
+RUN a2ensite * \
     && service apache2 reload || true
 
 RUN cd /etc/apache2/sites-available \

@@ -2,4 +2,7 @@
 php-apache/Codes/*
 mysql/data/*
 
+php-apache/sites-available/*
+!php-apache/sites-available/codeigniter.conf
+
 .DS_Store
